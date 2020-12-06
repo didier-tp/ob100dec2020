@@ -1,0 +1,5 @@
+1. concepts_objets_j1.ppt
+2. exemple de code orienté objet(java ou typescript ou ...)
+3. expr_besoins_analyse_UML
+4. conception_avec_uml et design_patterns
+
