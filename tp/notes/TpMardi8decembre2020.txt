@@ -1,0 +1,35 @@
+1. coder classe Client(num,nom,prenom) dans client.ts
+2. relier Client et Compte via une association 1-n
+   et effectuer des tests dans test_client.ts
+3. coder classe Adresse(num,rue,cp,ville) dans adresse.ts
+4. relier Client et Adresse via une association 1-1 
+   (éventuelle aggregation ou composition)
+5. coder nouveau fichier personne.ts ,
+   modifier client.ts avec héritage entre Client et Personne
+   Dans nouvelle version:
+      Personne(nom,prenom,adresse)
+      Client avec (num,comptes) en plus
+
+====================
+Autre Tp:
+- Porte (couleur,+ouvrir(),+fermer())
+- sous classe PortePivotante (-angleOuverture , -fairePivoter(angle))
+  avec console.log("nouvel angle="+this.angleOuverture);
+    et ouvrir() appelant this.fairePivoter(90)
+    et fermer() appelant this.fairePivoter(0)
+- sous classe PorteCoulissante(-ecartement, -faireGlisser(ecartement))
+  avec console.log("nouvel ecartement="+this.ecartement);
+    et ouvrir() appelant this.faireGlisser(80)
+    et fermer() appelant this.faireGlisser(0)
+- ali baba dit "porte ouvre toi" aux différents types de portes (polymorphisme)
+  rendre "abstract" la classe Porte et les opérations "ouvrir()" , "fermer()"
+==========================
+Autre Tp:
+- Classe Devise(code,nom,change) ex "EUR","euro" , 1 
+                                    "USD","dollar", 1.1
+- interface DeviseDao
+    saveListDevise(tabDevises:Devise[]) //version simple vers console.
+    //loadListDevise():Devise[]
+- 2 implémentations:
+    * DeviseDaoCsv
+    * DeviseDaoJson

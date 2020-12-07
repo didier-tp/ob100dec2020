@@ -1,0 +1,6 @@
+1.installer node (avec sous partie npm)
+2.lancer la commande 
+npm install -g typescript 
+dans console CMD
+3.installer l'éditeur Visual-Studio-Code (VSCode...)
+...

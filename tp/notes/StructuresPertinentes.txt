@@ -1,0 +1,29 @@
+Personne(administratif)
+----------------
+   - id / matricule
+   - nom , prenom
+   - email , ...
+   - adresse
+  ------------
+   - changerAdresse() ou demenager()
+   - setEmail() ou changerEmail() , ...
+
+Personne/Patient
+-------------
+   - numSecu (id)
+   - poids
+   - temperature
+   - groupeSanguin, ...
+-----------
+   - perdrePoids() , prendrePoids()
+
+
+Adresse
+-------
+ - numero
+ - voie ou rue
+ - codePostal
+ - ville 
+ - pays
+------
+ - set...() ou changer...()
