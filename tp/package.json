@@ -1,0 +1,14 @@
+{
+  "name": "tp",
+  "version": "1.0.0",
+  "description": "npm init \r pour générer package.json (toutes les valeurs proposées sont ok)\r ------------\r npm install -s @type/node \r pour utiliser fs en typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.11"
+  }
+}
