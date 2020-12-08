@@ -1,17 +1,22 @@
 import { Compte} from './compte'
-import { Adresse} from './adresse'
+import { Personne } from './personne';
 
-export class Client {
+
+export class Client extends Personne{
     public numero: number;
-    public nom: string;
-    public prenom: string;
-    public adressePrincipale : Adresse; //vers 1
     public comptes : Compte[]; //vers *
 
-    constructor(num:number=0,nom:string="?",prenom:string="?"){
-        this.numero= num; this.nom=nom; this.prenom = prenom;
-        this.adressePrincipale = null; //adresse pas encore connue/renseignée
+    constructor(num:number=0,pnom:string="?",pprenom:string="?"){
+        super(pnom,pprenom); //on repasse les paramètres nom et prenom
+                           //au consctructeur de la classe héritée
+        this.numero= num; 
         this.comptes = []; //liste vide pour commencer
+    }
+
+    //redéfinition facultative de afficher() sur la classe Client
+    public afficher(): void{
+        console.log("numClient=" + this.numero);//affichage supplémentaire amélioré
+        super.afficher(); //appeler la version héritée (codée sur Personne)
     }
 
     public ajouterCompte(compte:Compte){
