@@ -1,4 +1,5 @@
 "use strict";
+//import { Client } from "./client";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Compte = void 0;
 var Compte = /** @class */ (function () {
@@ -48,6 +49,7 @@ var Compte = /** @class */ (function () {
     Compte.prototype.crediter = function (montant) {
         this._solde = this._solde + montant;
     };
+    //public proprietaire : Client =null; // si association bi-directionnel
     Compte.tauxInteretDecouvert = 0.01; //1%
     Compte.decouvertAutorise = -300;
     return Compte;

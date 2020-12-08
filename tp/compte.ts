@@ -1,7 +1,10 @@
+//import { Client } from "./client";
+
 export class Compte {
     public numero :number;
     public label :string;
     private _solde :number;
+    //public proprietaire : Client =null; // si association bi-directionnel
 
     public static tauxInteretDecouvert :number = 0.01 ; //1%
 
