@@ -23,7 +23,7 @@ var PorteCoulissante = /** @class */ (function (_super) {
         _this.ecartement = 0; //0 cm, porte initialement fermée
         return _this;
     }
-    PorteCoulissante.prototype.faireCoulisser = function (ecartement) {
+    /*private*/ PorteCoulissante.prototype.faireCoulisser = function (ecartement) {
         this.ecartement = ecartement;
         console.log("nouvel ecartement=" + this.ecartement);
     };

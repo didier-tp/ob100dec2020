@@ -6,8 +6,6 @@ var Porte = /** @class */ (function () {
         if (couleur === void 0) { couleur = "black"; }
         this.couleur = couleur;
     }
-    Porte.prototype.ouvrir = function () { }; //code qui sera redéfini dans sous classes
-    Porte.prototype.fermer = function () { }; //code qui sera redéfini dans sous classes
     return Porte;
 }());
 exports.Porte = Porte;

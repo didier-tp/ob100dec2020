@@ -23,7 +23,7 @@ var PortePivotante = /** @class */ (function (_super) {
         _this.angleOuverture = 0; //0 dégré , porte initialement fermée
         return _this;
     }
-    PortePivotante.prototype.fairePivoter = function (angle) {
+    /*private*/ PortePivotante.prototype.fairePivoter = function (angle) {
         this.angleOuverture = angle;
         console.log("nouvel angleOuverture=" + this.angleOuverture);
     };

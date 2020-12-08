@@ -8,7 +8,7 @@ export class PortePivotante extends Porte {
         this.angleOuverture = 0; //0 dégré , porte initialement fermée
     }
 
-    private fairePivoter(angle:number){
+    /*private*/ public fairePivoter(angle:number){
         this.angleOuverture=angle;
         console.log("nouvel angleOuverture="+this.angleOuverture);
     }

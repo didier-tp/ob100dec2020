@@ -8,7 +8,7 @@ export class PorteCoulissante extends Porte {
         this.ecartement = 0; //0 cm, porte initialement fermée
     }
 
-    private faireCoulisser(ecartement:number){
+    /*private*/ public faireCoulisser(ecartement:number){
         this.ecartement=ecartement;
         console.log("nouvel ecartement="+this.ecartement);
     }
