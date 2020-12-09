@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var devise_1 = require("./devise");
 var devisedaocsv_1 = require("./devisedaocsv");
-var devisedaojson_1 = require("./devisedaojson");
 var TestDeviseDao = /** @class */ (function () {
     function TestDeviseDao() {
         this.tabDevises = [];
@@ -18,5 +17,5 @@ var TestDeviseDao = /** @class */ (function () {
 var testDeviseDao = new TestDeviseDao();
 testDeviseDao.deviseDao = new devisedaocsv_1.DeviseDaoCsv();
 testDeviseDao.sauvegarder();
-testDeviseDao.deviseDao = new devisedaojson_1.DeviseDaoJson();
+//testDeviseDao.deviseDao= new DeviseDaoJson();
 testDeviseDao.sauvegarder();

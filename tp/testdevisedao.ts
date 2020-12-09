@@ -24,6 +24,6 @@ class TestDeviseDao {
 var testDeviseDao = new TestDeviseDao();
 testDeviseDao.deviseDao= new DeviseDaoCsv();
 testDeviseDao.sauvegarder();
-testDeviseDao.deviseDao= new DeviseDaoJson();
+//testDeviseDao.deviseDao= new DeviseDaoJson();
 testDeviseDao.sauvegarder();
 
