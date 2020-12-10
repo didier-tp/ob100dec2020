@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var devise_1 = require("./devise");
-var devisedaocsv_1 = require("./devisedaocsv");
+var devisedaofactory_1 = require("./devisedaofactory");
 var TestDeviseDao = /** @class */ (function () {
     function TestDeviseDao() {
         this.tabDevises = [];
@@ -15,7 +15,13 @@ var TestDeviseDao = /** @class */ (function () {
     return TestDeviseDao;
 }());
 var testDeviseDao = new TestDeviseDao();
-testDeviseDao.deviseDao = new devisedaocsv_1.DeviseDaoCsv();
+/* v1 (sans factory)
+testDeviseDao.deviseDao= new DeviseDaoCsv();
 testDeviseDao.sauvegarder();
-//testDeviseDao.deviseDao= new DeviseDaoJson();
+testDeviseDao.deviseDao= new DeviseDaoJson();
+testDeviseDao.sauvegarder();
+*/
+//V2 : via factory et singleton:
+var deviseDaoFactory = devisedaofactory_1.DeviseDaoFactory.getInstance();
+testDeviseDao.deviseDao = deviseDaoFactory.createDao(); //csv ou json ou ...
 testDeviseDao.sauvegarder();

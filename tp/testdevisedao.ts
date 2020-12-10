@@ -1,6 +1,7 @@
 import { Devise } from "./devise";
 import { DeviseDao } from "./devisedao";
 import { DeviseDaoCsv } from "./devisedaocsv";
+import { DeviseDaoFactory } from "./devisedaofactory";
 import { DeviseDaoJson } from "./devisedaojson";
 
 class TestDeviseDao {
@@ -22,8 +23,14 @@ class TestDeviseDao {
 }
 
 var testDeviseDao = new TestDeviseDao();
+/* v1 (sans factory)
 testDeviseDao.deviseDao= new DeviseDaoCsv();
 testDeviseDao.sauvegarder();
-//testDeviseDao.deviseDao= new DeviseDaoJson();
+testDeviseDao.deviseDao= new DeviseDaoJson();
 testDeviseDao.sauvegarder();
+*/
 
+//V2 : via factory et singleton:
+var deviseDaoFactory = DeviseDaoFactory.getInstance();
+testDeviseDao.deviseDao= deviseDaoFactory.createDao();//csv ou json ou ...
+testDeviseDao.sauvegarder();
