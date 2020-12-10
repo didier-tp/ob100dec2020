@@ -97,8 +97,8 @@ import { Circle, Fig2D, FigVisitor, Line, Rectangle } from "./fig";
 
 }
 
-my_ts_test("json");
-//my_ts_test("svg");
+//my_ts_test("json");
+my_ts_test("svg");
 
 //NB: lancer node dist/fig-visitor.js > figs.json
 // ou bien   node dist/fig-visitor.js > figs.svg

@@ -4,6 +4,8 @@ exports.DeviseDaoFactory = void 0;
 var devisedaocsv_1 = require("./devisedaocsv");
 var devisedaojson_1 = require("./devisedaojson");
 var DeviseDaoFactory = /** @class */ (function () {
+    //constructeur exceptionnellement privé avec Singleton
+    //pour interdir le new direct et forcer à passer par getInstance()
     function DeviseDaoFactory() {
     }
     DeviseDaoFactory.getInstance = function () {
@@ -13,7 +15,7 @@ var DeviseDaoFactory = /** @class */ (function () {
         return DeviseDaoFactory.uniqueInstance;
     };
     DeviseDaoFactory.prototype.createDao = function () {
-        var versionDao = "csv"; //ou bien "json" 
+        var versionDao = "json"; //ou bien "csv" 
         //(éventuellement selon fichier de config)
         var deviseDao;
         if (versionDao == "csv")

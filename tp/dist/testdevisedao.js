@@ -23,5 +23,7 @@ testDeviseDao.sauvegarder();
 */
 //V2 : via factory et singleton:
 var deviseDaoFactory = devisedaofactory_1.DeviseDaoFactory.getInstance();
+//var deviseDaoFactory2 = new DeviseDaoFactory();
+//interdit si contructeur privé.
 testDeviseDao.deviseDao = deviseDaoFactory.createDao(); //csv ou json ou ...
 testDeviseDao.sauvegarder();

@@ -12,9 +12,12 @@ export class DeviseDaoFactory{
         }
         return DeviseDaoFactory.uniqueInstance;
     }
+    //constructeur exceptionnellement privé avec Singleton
+    //pour interdir le new direct et forcer à passer par getInstance()
+    private constructor(){} 
 
     public createDao() : DeviseDao{
-        let versionDao="csv"; //ou bien "json" 
+        let versionDao="json"; //ou bien "csv" 
         //(éventuellement selon fichier de config)
 
         let deviseDao : DeviseDao; 
